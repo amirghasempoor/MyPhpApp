@@ -13,7 +13,7 @@ class Database
         ]);
     }
 
-    public function query($query, $params)
+    public function query($query, $params = null)
     {
         $statment =  $this->connection->prepare($query);
 
