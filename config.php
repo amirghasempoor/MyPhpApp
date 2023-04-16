@@ -1,7 +1,9 @@
 <?php
 
 return [
-    'host' => 'localhost',
-    'dbname' => 'myapp',
-    'charset' => 'utf8mb4',
+    'database' => [
+        'host' => 'localhost',
+        'dbname' => 'myapp',
+        'charset' => 'utf8mb4',
+    ],
 ];
