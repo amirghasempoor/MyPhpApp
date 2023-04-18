@@ -10,12 +10,6 @@ $note = $db->query('select * from notes where id = :id', [
     'id' => $_GET['id']
     ])->findOrFail();
 
-if (! $note) {
-    abort(Response::NOT_FOUND);
-}
-
-if ($note['user_id'] !== 3) {
-    abort(Response::FORBIDDEN);
-}
+authorize($note['user_id'] === 3);
 
 require "views/note.view.php";
